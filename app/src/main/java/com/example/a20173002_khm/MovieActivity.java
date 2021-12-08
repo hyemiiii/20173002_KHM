@@ -112,8 +112,7 @@ public class MovieActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    public void makeRequest(){
-        String url = editText.getText().toString();
+    public void makeRequest(){        String url = editText.getText().toString();
 
         StringRequest request = new StringRequest(
                 Request.Method.GET,

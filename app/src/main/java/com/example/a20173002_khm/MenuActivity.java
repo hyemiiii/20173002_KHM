@@ -16,6 +16,7 @@ public class MenuActivity extends AppCompatActivity {
     public static final int REQUEST_CODE_HOME = 201;
     public static final int REQUEST_CODE_RANKING = 202;
     public static final int REQUEST_CODE_SMS = 203;
+    public static final int REQUEST_CODE_LOGIN = 204;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,8 +67,7 @@ public class MenuActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 intent.putExtra("titleMsg", "로그인");
 
-                setResult(Activity.RESULT_OK, intent);
-                finish();
+                startActivityForResult(intent, REQUEST_CODE_LOGIN);
             }
         });
 
@@ -99,7 +99,15 @@ public class MenuActivity extends AppCompatActivity {
                     Toast toast = Toast.makeText(getBaseContext(), "SMS 응답, result code : " + resultCode + ", message : " + message, Toast.LENGTH_LONG);
                     toast.show();
                 }
+            } else if (requestCode == REQUEST_CODE_LOGIN) {
+                String message = intent.getStringExtra("message");
+
+                if (message != null) {
+                    Toast toast = Toast.makeText(getBaseContext(), "로그인 응답, result code : " + resultCode + ", message : " + message, Toast.LENGTH_LONG);
+                    toast.show();
+                }
             }
+
         }
 
     }

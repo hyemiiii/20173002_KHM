@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
                 String username = usernameInput.getText().toString();
                 String password = passwordInput.getText().toString();
 
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
                 intent.putExtra("username", username);
                 intent.putExtra("password", password);
 

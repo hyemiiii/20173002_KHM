@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp">
+
+
+    <EditText
+        android:id="@+id/join_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="아이디"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/join_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/join_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이름"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/join_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이메일"
+        android:layout_marginBottom="16dp"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="여성"/>
+
+        <RadioButton
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="남성"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/joinBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="가입"/>
+
+</LinearLayout>
